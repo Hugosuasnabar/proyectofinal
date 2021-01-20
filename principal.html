@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="import" href="pagina16.html">
+</head>
+<body>
+    <div class="caja" >
+    <p class="titulo">Bienvenido: <script>document.getElementById('nommbre')</script></p>
+    <p class="titulo">Nombre: <script>document.getElementById('apellido')</script></p>
+    <p class="titulo">Apellido: <script>document.getElementById('estudios')</script></p>
+    <p class="titulo">Nivel de estudio: <script>document.getElementById('estudios')</script></p>
+    <p class="titulo">Ciudad: <script>document.getSelection('ciudad')</script></p>
+    <p class="titulo">Sexo: <script>document.getElementById('sexo')</script></p>
+    <p class="titulo">Foto: <script>document.getElementById('adjunto')</script></p>
+
+    <script type="text/javascript">
+        var nombre = document.getElementById('nombre').value;
+        var apellido = document.getElementById('apellido').value;
+        var estudios = document.getElementById('estudios').value;
+        var select = document.getSelection('ciudad').value;
+        var sexo = document.getElementById('sexo').value;
+        var foto = document.getElementById('adjunto').value;
+
+    </script>
+    </div>
+    
+</body>
+</html>

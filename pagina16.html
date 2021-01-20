@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Registro tabajadores</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <h1>Registro trabajadores</h1>
+    <div id="info"></div>
+    <div class="caja">
+        <form action="principal.html" method="POST" name="formulario">
+            <table class="tabla">
+                <tr>
+                    <td>Rut: </td>
+                    <td><input type="text" name="rut" id="rut"  minlength="11" maxlength="11" onKeyPress="return soloNumeros(event)" placeholder="Sin puntos ni guion" required></td>
+                </tr>
+                <tr>
+                    <td>Nombre: </td>
+                    <td><input type="text" name="nombre" id="nombre" value="" onkeypress="return soloLetras(event)" required></td>
+                </tr>
+                <tr>
+                    <td>Apellido Paterno: </td>
+                    <td><input type="text" name="apellido" id="apellido" value="" onkeypress="return soloLetras(event)" required></td>
+                </tr>
+                <tr>
+                    <td>Apellido Materno: </td>
+                    <td><input type="text" name="apellido" id="apellido" value="" onkeypress="return soloLetras(event)" required></td>
+                </tr>
+                <tr>
+                    <td>Sexo: </td>
+                    <td>
+                        <input type="radio" name="sexo" id="sexo" value="H">Hombre
+                        <input type="radio" name="sexo" id="sexo" value="M">Mujer
+                    </td>
+                </tr>
+                <tr>
+                    <td>Nivel de estudio: </td>
+                    <td>
+                        <input type="checkbox" name="estudios" id="estudios" value="1"><label for="estudios">No tiene</label>
+                        <br>
+                        <input type="checkbox" name="estudios" id="estudios" value="2"><label for="estudios">Tecnico</label>
+                        <br>
+                        <input type="checkbox" name="estudios" id="estudios" value="3"><label for="estudios">Universitario</label>
+                        <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ciudad de nacimiento: </td>
+                    <td>
+                        <select name="select" id="ciudad">
+                        <option value="rancagua">Rancagua</option>
+                        <option value="huanuco">Huanuco</option>
+                        <option value="cusco">Cusco</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Curriculum: </td>
+                    <td><input type="file" name="adjunto" accept=".pdf;.doc"></td>
+                </tr>
+                <tr>
+                    <td>Foto: </td>
+                    <td><input type="file" name="adjunto" id="adjunto" accept=".jpg;.png"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="btn"><input class="boton" type="submit" value="Registrar trabajador"></td>
+                </tr>
+            </table>
+
+            <script type="text/javascript">
+                // Solo permite ingresar numeros.
+                function soloNumeros(e){
+                    var key = window.Event ? e.which : e.keyCode
+                    return (key >= 48 && key <= 57)
+                }
+                </script>
+            
+            <script>
+                function soloLetras(e){
+                   key = e.keyCode || e.which;
+                   tecla = String.fromCharCode(key).toLowerCase();
+                   letras = " áéíóúabcdefghijklmnñopqrstuvwxyz";
+                   especiales = "8-37-39-46";
+
+                   tecla_especial = false
+                      for(var i in especiales){
+                      if(key == especiales[i]){
+                       tecla_especial = true;
+                      break;
+                   }
+                 }
+                if(letras.indexOf(tecla)==-1 && !tecla_especial){
+                return false;
+                }
+                }
+             </script> 
+
+             <script type="text/javascript">
+             function pasaform(){
+                window.open('principal.html','winpop','width=240,height=100');
+             }
+
+             </script>
+    
+        </form>
+        <script type="text/javascript">
+            var nombre = document.getElementById('nombre').value;
+            var apellido = document.getElementById('apellido').value;
+            var estudios = document.getElementById('estudios').value;
+            var select = document.getSelection('ciudad').value;
+            var sexo = document.getElementById('sexo').value;
+            var foto = document.getElementById('adjunto').value;
+    
+        </script>
+    </div>
+</body>
+</html>

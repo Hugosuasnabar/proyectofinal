@@ -1,0 +1,19 @@
+h1{
+    text-align: center;
+    margin: auto;
+    background-color: rgba(51, 255, 167);
+    width: 30%;
+    height: 30%;
+}
+.caja{
+    margin: auto;
+    width: 30%;
+    height: 30%;
+    padding: 20px;
+    border-radius: 20px;
+}
+.btn{
+    text-align: center;
+    background-color: rgba(51, 255, 167);
+    
+}
